@@ -1,16 +1,72 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Class Styling</title>
+    <style>
+        :root {
+            background-color: rgb(135, 206, 235); /* Set background color using :root */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        /* Article styling */
+        article p:first-child {
+            background-color: black;
+            color: white;
+        }
+
+        article p:nth-child(2) {
+            color: inherit; /* Standard text color */
+        }
+
+        article p:last-child {
+            color: red;
+        }
+
+        /* Unordered list styling */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            width: 50%;
+            padding: 10px;
+            background-color: gray;
+        }
+
+        ul li:nth-child(odd) {
+            background-color: white;
+        }
+
+        ul li:first-child, 
+        ul li:last-child {
+            font-size: 22px;
+        }
+
+        ul li:nth-last-child(3) {
+            background-color: pink;
+        }
+    </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+    <article>
+        <p>This is the first paragraph with white text on a black background.</p>
+        <p>This is the second paragraph with standard text color.</p>
+        <p>This is the third and last paragraph with red text.</p>
+    </article>
 
+    <ul>
+        <li>First item </li>
+        <li>Second item</li>
+        <li>Third item </li>
+        <li>Fourth item</li>
+        <li>Last item </li>
+    </ul>
 </body>
-
 </html>
